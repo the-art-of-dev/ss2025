@@ -34,7 +34,7 @@
 <ul>
 <li>Alat za verzionisanje koda</li>
 <li>Svaki komit predstavlja verziju</li>
-<li>Svaki grana predstavlja paralelnu istoriju verziju</li>
+<li>Svaki grana predstavlja paralelnu istoriju verzija</li>
 </ul>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="3" data-class="invert" data-style=".logo {
@@ -80,7 +80,7 @@
 ;">
 <h2 id="kloniranje-repozitorijuma">Kloniranje repozitorijuma</h2>
 <ul>
-<li>Repozitorijum najčešće ima lokalnu i udaljenu(<em>remote</em>)</li>
+<li>Repozitorijum najčešće ima lokalnu i udaljenu(<em>remote</em>) verziju</li>
 <li>Kloniranje je proces dovlačenja udaljene verzije repozitorijuma</li>
 </ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">git <span class="hljs-built_in">clone</span> https://github.com/the-art-of-dev/swtf.git                            <span class="hljs-comment"># Klonira repozitorijum</span>
@@ -119,8 +119,8 @@ git config pull.rebase <span class="hljs-literal">false</span>                  
 ;">
 <h2 id="kloniranje-repozitorijuma-sa-autorizacijom--ssh-key">Kloniranje repozitorijuma sa autorizacijom | SSH KEY</h2>
 <ul>
-<li>Neophodan SSH par kljuceva</li>
-<li>Neophodan javni kljuc postavljen na git provider plaformi</li>
+<li>Neophodan par SSH ključeva (<em>public, private</em>)</li>
+<li>Neophodan javni ključ postavljen na git provider plaformi</li>
 </ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">git <span class="hljs-built_in">clone</span> -c <span class="hljs-string">&quot;core.sshCommand=ssh -i ~/SSH_PRIVATE_KEY&quot;</span> git@github.com:the-art-of-dev/swtf.git
 </code></pre>
@@ -157,14 +157,14 @@ git branch checkout develop                     <span class="hljs-comment"># Pre
 ;">
 <h2 id="pregled-loga">Pregled loga</h2>
 <ul>
-<li>Log omogućavaju lakši pregled kroz istoriju verzija</li>
+<li>Log omogućava lakši pregled kroz istoriju verzija</li>
 </ul>
 <pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">git <span class="hljs-built_in">log</span> --oneline --decorate        <span class="hljs-comment"># Ispisuje log verzija na trenutnoj grani</span>
 
 git <span class="hljs-built_in">log</span> --<span class="hljs-built_in">stat</span>                      <span class="hljs-comment"># Ispisuje log verzija sa informacijama</span>
                                     <span class="hljs-comment"># o promenjenim fajlovima</span>
 
-git <span class="hljs-built_in">log</span> -p -- libs/               <span class="hljs-comment"># Ispisuje log verzija sa informacijama</span>
+git <span class="hljs-built_in">log</span> -p -- libs/                 <span class="hljs-comment"># Ispisuje log verzija sa informacijama</span>
                                     <span class="hljs-comment"># o promenama u fajlovima u folderu libs/</span>
 </code></pre>
 </section>
@@ -178,11 +178,11 @@ git <span class="hljs-built_in">log</span> -p -- libs/               <span class
 }
 ;">
 <h2 id="pra%C4%87enje-lokalnih-promena">Praćenje lokalnih promena</h2>
-<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">git status -s                        <span class="hljs-comment"># Prikazuje sve promene u repozitorijumu</span>
+<pre is="marp-pre" data-auto-scaling="downscale-only"><code class="language-bash">git status -s                       <span class="hljs-comment"># Prikazuje sve promene u repozitorijumu</span>
 
-git add libs/                      <span class="hljs-comment"># Priprema sve promene iz foldera libs/ za novi komit</span>
+git add libs/                       <span class="hljs-comment"># Priprema sve promene iz foldera libs/ za novi komit</span>
 
-git restore --staged libs/test.txt <span class="hljs-comment"># Izbacije promenu na fajlu iz pripremljenih za novi komit</span>
+git restore --staged libs/test.txt  <span class="hljs-comment"># Izbacije promenu na fajlu iz pripremljenih promena za novi komit</span>
 </code></pre>
 </section>
 </foreignObject></svg><svg data-marpit-svg="" viewBox="0 0 1280 720"><foreignObject width="1280" height="720"><section id="11" data-class="invert" data-style=".logo {
