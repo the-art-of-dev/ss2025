@@ -20,3 +20,8 @@
 - Have fun and keep hacking!
 
 ## Hackers
+
+- https://github.com/Keka9
+- https://github.com/TheNeleus
+- https://github.com/Leca187
+- https://github.com/vu-koman
