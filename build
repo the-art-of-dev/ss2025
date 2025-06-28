@@ -1,0 +1,8 @@
+#!/bin/bash
+
+for file in docs/learning/*/*.md; do
+    outfile=$(echo $file | sed s/.md/.html/)
+    echo "[+] $file -> $outfile"
+    npx @marp-team/marp-cli@latest $file -o $outfile
+done
+
