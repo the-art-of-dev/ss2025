@@ -22,7 +22,7 @@ style: |
 
 - Alat za verzionisanje koda
 - Svaki komit predstavlja verziju
-- Svaki grana predstavlja paralelnu istoriju verziju
+- Svaki grana predstavlja paralelnu istoriju verzija
 
 ---
 
@@ -44,7 +44,7 @@ style: |
 
 ## Kloniranje repozitorijuma
 
-- Repozitorijum najčešće ima lokalnu i udaljenu(*remote*)
+- Repozitorijum najčešće ima lokalnu i udaljenu(*remote*) verziju
 - Kloniranje je proces dovlačenja udaljene verzije repozitorijuma
 
 ```bash
@@ -70,8 +70,8 @@ git clone https://<USERNAME>:<TOKEN>@github.com/the-art-of-dev/swtf.git         
 
 ## Kloniranje repozitorijuma sa autorizacijom | SSH KEY
 
-- Neophodan SSH par kljuceva
-- Neophodan javni kljuc postavljen na git provider plaformi
+- Neophodan par SSH ključeva (*public, private*)
+- Neophodan javni ključ postavljen na git provider plaformi
 
 ```bash
 git clone -c "core.sshCommand=ssh -i ~/SSH_PRIVATE_KEY" git@github.com:the-art-of-dev/swtf.git
@@ -97,7 +97,7 @@ git branch checkout develop                     # Prelazi na granu develop
 
 ## Pregled loga
 
-- Log omogućavaju lakši pregled kroz istoriju verzija
+- Log omogućava lakši pregled kroz istoriju verzija
 
 ```bash
 git log --oneline --decorate        # Ispisuje log verzija na trenutnoj grani
@@ -105,7 +105,7 @@ git log --oneline --decorate        # Ispisuje log verzija na trenutnoj grani
 git log --stat                      # Ispisuje log verzija sa informacijama
                                     # o promenjenim fajlovima
 
-git log -p -- libs/               # Ispisuje log verzija sa informacijama
+git log -p -- libs/                 # Ispisuje log verzija sa informacijama
                                     # o promenama u fajlovima u folderu libs/
 ```
 
@@ -114,11 +114,11 @@ git log -p -- libs/               # Ispisuje log verzija sa informacijama
 ## Praćenje lokalnih promena
 
 ```bash
-git status -s                        # Prikazuje sve promene u repozitorijumu
+git status -s                       # Prikazuje sve promene u repozitorijumu
 
-git add libs/                      # Priprema sve promene iz foldera libs/ za novi komit
+git add libs/                       # Priprema sve promene iz foldera libs/ za novi komit
 
-git restore --staged libs/test.txt # Izbacije promenu na fajlu iz pripremljenih za novi komit
+git restore --staged libs/test.txt  # Izbacije promenu na fajlu iz pripremljenih promena za novi komit
 ```
 
 ---
